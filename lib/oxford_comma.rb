@@ -1,7 +1,11 @@
 def oxford_comma(array)
-    oxford_comma = ["kiwi"].join
-end
-
-def oxford_end(element1, element2)
-  oxford_end = ["kiwi", "durian",].join(" and ")
+if array.length == 1
+  oxford_comma = ["kiwi"].join
+  return "#{array[0]}"
+elsif array.length == 2
+  return array.join("and ")
+elsif array.length >= 3
+  array[-1] = "and #{array[-1]}"
+  return array.join(", ")
+  end
 end
